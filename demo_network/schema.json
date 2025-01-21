@@ -3,8 +3,8 @@
         {
             "node": "authors",
             "example": [
-                "35861015;39017846",
-                "36978104"
+                "A Ma'ayan",
+                "DJB Clarke"
             ],
             "display": [
                 {
@@ -16,12 +16,18 @@
                     "label": "label",
                     "text": "${label}",
                     "type": "text"
+                },
+                {
+                    "label": "PMIDS",
+                    "text": "${PMIDS}",
+                    "type": "text"
                 }
             ],
             "relation": [],
             "search": [
                 "id",
-                "label"
+                "label",
+                "PMIDS"
             ]
         }
     ],
