@@ -1,0 +1,152 @@
+{
+    "nodes": [
+        {
+            "node": "authors",
+            "example": [
+                "35861015;39017846",
+                "36978104"
+            ],
+            "display": [
+                {
+                    "label": "authors ID",
+                    "text": "${id}",
+                    "type": "text"
+                },
+                {
+                    "label": "label",
+                    "text": "${label}",
+                    "type": "text"
+                }
+            ],
+            "relation": [],
+            "search": [
+                "id",
+                "label"
+            ]
+        }
+    ],
+    "edges": [
+        {
+            "match": [
+                "Coauthors"
+            ],
+            "selected": true,
+            "display": [
+                {
+                    "label": "source",
+                    "text": "${source}",
+                    "type": "text"
+                },
+                {
+                    "label": "relation",
+                    "text": "${relation}",
+                    "type": "text"
+                },
+                {
+                    "label": "target",
+                    "text": "${target}",
+                    "type": "text"
+                },
+                {
+                    "label": "Citations",
+                    "text": "${Citations}",
+                    "type": "text"
+                }
+            ]
+        }
+    ],
+    "header": {
+        "header": "Demo-KG",
+        "title": "Demo-KG",
+        "background": {
+            "backgroundColor": "#000",
+            "contrastText": "#FFF"
+        },
+        "icon": {
+            "src": "https://minio.dev.maayanlab.cloud/enrichr-kg/enrichr-kg.png",
+            "favicon": "https://minio.dev.maayanlab.cloud/enrichr-kg/enrichr-kg.png",
+            "faviconTitle": "Demo-KG",
+            "alt": "Demo-KG",
+            "key": "Demo-KG_logo",
+            "width": 100,
+            "height": 60
+        },
+        "tabs": [
+            {
+                "endpoint": "/",
+                "label": "Term & Gene Search",
+                "type": "page",
+                "component": "KnowledgeGraph",
+                "props": {
+                    "init_function": "initialize_kg",
+                    "initial_query": {
+                        "start": "authors",
+                        "start_term": "A Ma'ayan",
+                        "start_field": "label"
+                    },
+                    "subheader": {
+                        "url_field": "filter",
+                        "query_field": "relation"
+                    }
+                }
+            }
+        ]
+    },
+    "footer": {
+        "style": {
+            "background": "#000",
+            "color": "#FFF"
+        },
+        "layout": [
+            [
+                {
+                    "component": "logo",
+                    "props": {
+                        "src": "https://minio.dev.maayanlab.cloud/enrichr-kg/enrichr-kg.png",
+                        "alt": "enrichr-kg",
+                        "title": "Enrichr-KG",
+                        "color": "inherit",
+                        "size": "small"
+                    }
+                },
+                {
+                    "component": "github",
+                    "props": {
+                        "code": "https://github.com/MaayanLab/enrichr-kg",
+                        "issues": "https://github.com/MaayanLab/enrichr-kg-issues/issues/new"
+                    }
+                }
+            ],
+            [
+                {
+                    "component": "icon",
+                    "props": {
+                        "type": "icon",
+                        "key": "lab_icon",
+                        "src": "https://minio.dev.maayanlab.cloud/enrichr-kg/maayanlab.png",
+                        "alt": "MaayanLab",
+                        "href": "https://labs.icahn.mssm.edu/maayanlab/",
+                        "height": 60,
+                        "width": 150
+                    }
+                }
+            ],
+            [
+                {
+                    "component": "icon",
+                    "props": {
+                        "type": "icon",
+                        "key": "center_icon",
+                        "src": "https://minio.dev.maayanlab.cloud/enrichr-kg/bioinformatics.png",
+                        "alt": "COB",
+                        "href": "https://icahn.mssm.edu/research/bioinformatics",
+                        "height": 60,
+                        "width": 150
+                    }
+                }
+            ]
+        ],
+        "footer_text": "<span style='color:white'>Please acknowledge Enrichr-KG in your publications by citing the following reference:<br><a style='color: cyan' href='https://doi.org/10.1093/nar/gkad393'>Evangelista JE, Xie Z, Marino GB, Nguyen N, Clarke DJB, Ma'ayan A. Enrichr-KG: bridging enrichment analysis across multiple libraries. Nucleic Acids Res. 2023 May 11:gkad393. doi: 10.1093/nar/gkad393. PMID: 37166973.</a></span>"
+    },
+    "ui_theme": "enrichr_kg_theme"
+}
