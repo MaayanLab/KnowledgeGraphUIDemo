@@ -3,8 +3,8 @@
         {
             "node": "authors",
             "example": [
-                "JJ Bieker",
-                "TA Blenkinsop"
+                "A Ma'ayan",
+                "DJB Clarke"
             ],
             "display": [
                 {
@@ -26,18 +26,18 @@
             "relation": [],
             "search": [
                 "id",
-                "label"
+                "label",
+                "PMIDS"
             ]
         },
         {
-            "node": "pmids",
+            "node": "pmid",
             "example": [
-                38812546,
-                36884236
+                "37214901"
             ],
             "display": [
                 {
-                    "label": "pmids ID",
+                    "label": "pmid ID",
                     "text": "${id}",
                     "type": "text"
                 },
@@ -49,41 +49,18 @@
                 {
                     "label": "url",
                     "text": "${url}",
-                    "href": "${url}",
-                    "type": "link"
+                    "type": "url"
                 }
             ],
             "relation": [],
             "search": [
                 "id",
-                "label"
-            ]
+                "label",
+                "url"
+            ] 
         }
     ],
     "edges": [
-        {
-            "match": [
-                "published"
-            ],
-            "selected": true,
-            "display": [
-                {
-                    "label": "source",
-                    "text": "${source}",
-                    "type": "text"
-                },
-                {
-                    "label": "relation",
-                    "text": "${relation}",
-                    "type": "text"
-                },
-                {
-                    "label": "target",
-                    "text": "${target}",
-                    "type": "text"
-                }
-            ]
-        },
         {
             "match": [
                 "Coauthors"
@@ -108,6 +85,29 @@
                 {
                     "label": "Citations",
                     "text": "${Citations}",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "match": [
+                "published"
+            ],
+            "selected": true,
+            "display": [
+                {
+                    "label": "source",
+                    "text": "${source}",
+                    "type": "text"
+                },
+                {
+                    "label": "relation",
+                    "text": "${relation}",
+                    "type": "text"
+                },
+                {
+                    "label": "target",
+                    "text": "${target}",
                     "type": "text"
                 }
             ]
