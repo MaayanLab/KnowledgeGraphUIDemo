@@ -29,6 +29,35 @@
                 "label",
                 "PMIDS"
             ]
+        },
+        {
+            "node": "pmid",
+            "example": [
+                "37214901"
+            ],
+            "display": [
+                {
+                    "label": "pmid ID",
+                    "text": "${id}",
+                    "type": "text"
+                },
+                {
+                    "label": "label",
+                    "text": "${label}",
+                    "type": "text"
+                },
+                {
+                    "label": "url",
+                    "text": "${url}",
+                    "type": "url"
+                }
+            ],
+            "relation": [],
+            "search": [
+                "id",
+                "label",
+                "url"
+            ] 
         }
     ],
     "edges": [
@@ -56,6 +85,29 @@
                 {
                     "label": "Citations",
                     "text": "${Citations}",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "match": [
+                "published"
+            ],
+            "selected": true,
+            "display": [
+                {
+                    "label": "source",
+                    "text": "${source}",
+                    "type": "text"
+                },
+                {
+                    "label": "relation",
+                    "text": "${relation}",
+                    "type": "text"
+                },
+                {
+                    "label": "target",
+                    "text": "${target}",
                     "type": "text"
                 }
             ]
