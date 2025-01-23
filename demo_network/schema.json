@@ -86,7 +86,7 @@
         },
         {
             "match": [
-                "Coauthors"
+                "published"
             ],
             "selected": true,
             "display": [
@@ -103,11 +103,6 @@
                 {
                     "label": "target",
                     "text": "${target}",
-                    "type": "text"
-                },
-                {
-                    "label": "Citations",
-                    "text": "${Citations}",
                     "type": "text"
                 }
             ]
